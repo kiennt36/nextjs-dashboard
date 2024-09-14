@@ -1,5 +1,7 @@
 import SideNav from "@/app/ui/dashboard/sidenav";
 
+export const experimental_ppr = true;
+
 type LayoutProps = {
     children: React.ReactNode;  // The content of the layout component (e.g., the main content area)
 
