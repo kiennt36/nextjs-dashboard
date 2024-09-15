@@ -17,5 +17,16 @@ export const authConfig = {
       return true;
     },
   },
+  cookies: {
+    sessionToken: {
+      name: `__Secure-next-auth.session-token`,
+      options: {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === 'production', // Only on HTTPS
+        sameSite: 'lax',
+        path: '/',
+      },
+    },
+  },
   providers: [], // Add providers with an empty array for now
 } satisfies NextAuthConfig;
